@@ -243,6 +243,7 @@ private async void HandleValidSubmit()
     }
     // 透過 IMyNoteService.RetriveAsync() 方法，來取得所有記事清單
     Notes = await MyNoteService.RetriveAsync();
+    StateHasChanged();
 }
 ```
 
