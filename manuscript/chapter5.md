@@ -110,7 +110,7 @@ services.AddDbContext<MyNoteDbContext>(options =>
 using BlazorOverview.Models;
 using Microsoft.EntityFrameworkCore;
 ```
-- 在這個類別最前面，加入底下的使用命名空間宣告
+- 在這個類別，使用底下的程式碼來設計
 
 ```csharp
 using BlazorOverview.Models;
