@@ -37,6 +37,36 @@
 - 在同樣的位置，使用底下 HTML 標記來取代
 
 ```html
+@*這裡的 BootStrap 對話窗，將會透過使用 C# 呼叫 jQuery 來顯示與關閉 *@
+<div class="modal" tabindex="-1" role="dialog" id="@DialogIdName">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">記事項目</h5>
+                <button type="button" class="close" @onclick="CloseDialog">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="row p-2">
+                            <EditForm Model="@CurrentMyNote" OnValidSubmit="@HandleValidSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <div class="form-group">
+                                    <label for="taskName">Task Name</label>
+                                    <InputText id="name" class="form-control" @bind-Value="@CurrentMyNote.Title" />
+                                </div>
+                                <button type="submit" class="btn btn-primary">儲存</button>
+                            </EditForm>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 ```
 
 - 在 `@code { }` 程式碼區塊內，加入底下的變數宣告
