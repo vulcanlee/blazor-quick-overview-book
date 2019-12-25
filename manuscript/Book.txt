@@ -2,7 +2,7 @@
 ch00-preface.md
 ch00-about-the-book.md
 {mainmatter}
-chapter1-1.md
+chapter1.md
 chapter2.md
 {backmatter}
 ch99-copyright.md
