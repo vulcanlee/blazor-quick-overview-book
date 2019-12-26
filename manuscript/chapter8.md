@@ -1,4 +1,4 @@
-# 切換使用 Web API 來存取記事服務相關紀錄
+# 使用 Web API 來儲存記事服務相關紀錄
 
 最後，將會來設計一個呼叫 Web API 的服務，讓 Blazor 專案可以來呼叫剛剛設計的 RESTful Web API 服務。
 

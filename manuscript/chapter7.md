@@ -36,7 +36,7 @@ public class MyNote :ICloneable
 }
 ```
 
-## 註冊 Web API 會用到的服務
+## 在 Blazor 專案內設計 Web API 服務
 
 - 在專案根目錄下，找到 [Startup.cs] 檔案節點
 - 打開這個檔案

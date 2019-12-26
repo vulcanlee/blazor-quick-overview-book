@@ -41,6 +41,11 @@ namespace BlazorOverview.Models
   
   ![建立一個 MyNotes 之 Blazor 元件](Images/BlazorQO991.png)
 
+  I> ## 說明
+  I>
+  I> 每一個 Blazor 元件都可以成為具有路由的實際網頁 URL，不過，在這裡的練習過程中，將會簡化這些設計內容，將整個 CRUD 應用程式，濃縮在一個 Blazor Component 元件上，也讓讀者可以體會到 Blazor 的一個很重要的特色，那就是 Blazor 的元件是可以做到重複使用的目的。
+  I> 
+  
  - 使用底下 Razor 程式碼來替換到這個檔案內的所有內容
  
   ![MyNotes 元件的 Razor 設計結果](Images/BlazorQO990.png)
@@ -78,7 +83,8 @@ namespace BlazorOverview.Models
     </tbody>
 </table>
 <div>
-    @*透過 Blazor 的資料綁定，將新增按鈕的點選事件，綁定到 C# 的委派處理方法*@
+    @*透過 Blazor 的資料綁定，將新增按鈕的點選事件，*@
+    @*綁定到 C# 的委派處理方法*@
     <input type="button" class="btn btn-primary" @onclick="Add" value="新增" />
 </div>
 
@@ -111,6 +117,11 @@ namespace BlazorOverview.Models
 }
 ```
 
+  I> ## 說明
+  I>
+  I> 每個 Blazor 元件是一個 Razor 元件檔案，附檔案名稱為 .razor，其是由 HTML 標記與 C# 程式語言所組成；在上面的 MyNotes.razor 檔案， `@code{...}` 區塊為要設計的 C# 程式語言，其他的部分則是 HTML 宣告標記語言，不過，可以使用 `@` 符號，讓 HTML 標記宣告語言參雜 C# 程式語言在其中。
+  I> 
+  
 ## 在 Blazor 專案首頁，加入此元件
 
 - 在 [Pages] 資料夾中找到 [Index.razor] 這個檔案
@@ -119,7 +130,7 @@ namespace BlazorOverview.Models
 
   T> ## 說明
   T>
-  T> 在這裡僅加入 `<MyNotes />` 這個元件參考，讓這個剛剛設計的新 Blazor 元件，可以顯示在首頁上
+  T> 想要在 Blazor 專案內的元件，使用該專案內的其他元件，可以把每個元件都是為一個 HTML 標籤，在這裡僅加入 `<MyNotes />` 這個元件參考，讓這個剛剛設計的新 Blazor 元件，可以顯示在首頁上
   T> 
 
 ```html
@@ -133,12 +144,23 @@ Welcome to your new app.
 <MyNotes />
 ```
 
+I> ## 說明
+I>
+I> 透過這樣的練習設計，簡化了每次執行專案的時候，就可以立即在首頁上看到這次設計的 CRUD 應用的元件了。
+I> 
+  
+
 ## 執行這個專案
 
 - 請點選工具列上方的綠色三角形，或者按下 F5 ，開始執行這個 Blazor 專案
 - 此時，將會在瀏覽器上出現底下畫面
   
   ![Blazor 專案具有新增與刪除執行結果](Images/BlazorQO989.png)
+
+  I> ## 說明
+  I>
+  I> 這裡會預先看到兩筆記事紀錄，這是因為在該 MyNotes.razor 元件建立的時候，就已經預先產生兩筆記事紀錄了，不過，由於這些記事紀錄都是使用電腦記憶體作為儲存之用，因此，每次重啟這個專案的時候，原先輸入的記事紀錄都會不見。
+  I> 
 
 - 點選 [新增] 按鈕兩次
 - 此時將會自動加入兩筆紀錄到集合清單內
