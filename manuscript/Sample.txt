@@ -1,10 +1,7 @@
 {frontmatter}
-ch00-preface.md
 ch00-about-the-book.md
 {mainmatter}
-chapter1-1.md
-chapter1-21.md
-chapter1-3.md
+chapter1.md
 chapter2.md
 chapter3.md
 {backmatter}

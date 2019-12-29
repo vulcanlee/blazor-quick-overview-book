@@ -48,3 +48,7 @@
 
 讀者必須具備 .NET / C# 的開發經驗、HTML / CSS 的基本認識即可，對於開發工具而言，本書是在 Windows 10 作業系統下，使用任何 Visual Studio 2019 的版本，就可以進行開發。
 
+## 練習專案原始碼
+
+本電子書中的練習專案原始碼，可以從 [https://github.com/vulcanlee/Blazor-Quick-Overview](https://github.com/vulcanlee/Blazor-Quick-Overview) 取得
+
