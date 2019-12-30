@@ -2,6 +2,8 @@
 
 首先，先要來學習如何透過 Visual Studio 2019 開發工具來建立一個 Blazor 伺服器端的專案
 
+> 這本書的所有內容將會是在 Windows 10 專業版 (版本 1909 / 組建 18363.535) 與 Visual Studio 2019 Enterprise ( Version 16.4.2) 下所建立出來的，當然，任何 Visual Studio 2019 的版本皆可，不一定要使用 Enterprise 版本，Community / Professioal 版本也可以。
+
 - 打開 Visual Studio 2019 開發工具
 - 當 [Visual Studio 2019] 對話窗出現之後，點選右下方的 [建立新的專案] 按鈕
   

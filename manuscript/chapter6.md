@@ -104,7 +104,7 @@ public string DialogIdName { get; set; } = "myModal";
 - 在搜尋文字輸入盒內，輸入 `Blazored.Modal` 文字
 - 點選這個 [Blazored.Modal] 套件，並且安裝到這個專案內
   
-  ![](Images/BlazorQO965.png)
+  ![安裝 Blazored.Modal NuGet 套件](Images/BlazorQO965.png)
 
 - 打開 [Startup.cs] 檔案節點，準備進行這個服務的註冊
 - 在這個類別前面，使用底下程式碼，加上要使用命名空間的宣告

@@ -191,12 +191,10 @@ namespace BlazorOverview
 - 在最上方，找到 `@using BlazorOverview.Models` 敘述，在這個敘述的下方，加入底下的程式碼
 
 ```csharp
-
 @*加入要使用 BlazorOverview.Services 命名空間的 API*@
 @using BlazorOverview.Services
 @*當這個 Blazor 元件建立之後，要注入這個 IMyNoteService 抽象型別的具體實作物件*@
 @inject IMyNoteService MyNoteService
-
 ```
 
 - 在 `@code {}` 程式碼區塊內，找到 `protected override void OnInitialized()` 方法，將這個方法刪除掉
@@ -445,7 +443,7 @@ private async void HandleValidSubmit()
 - 最後，請刪除 [買西瓜] 事項
 - 接著，就會看到 [買西瓜] 事項 消失在瀏覽清單內
   
-  ![完成新增集合清單紀錄畫面](Images/BlazorQO975.png)
+  ![完成刪除紀錄畫面](Images/BlazorQO975.png)
 
 ## 結論
 
