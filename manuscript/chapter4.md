@@ -2,6 +2,12 @@
 
 對於要能夠開發出好維護的專案，最好能夠不要把具體實作直接寫在各個 Razor 元件內，而是使用抽象型別來設計，而實際的實作程式碼，將會透過系統內建的相依性注入容器來注入到所需要的 Razor 元件內，接下來將說明如何做到這樣的專案設計。
 
+T> ## 提示說明
+T>
+T> Dependency Injection 相依注入設計模式，是現代開發者必須要學會，而且要充分理解這個設計模式究竟是在做什麼，可以幫助程式設計師做到那些更好的事情；在這裡，原先 CRUD 的各個操作程式碼，分散在這個 Blazor 元件的各個地方，現在，先將這些程式碼抽取出來，放入到一個服務類別內，接者為這個類別設計一個抽象的介面，之後就可以透過 ASP.NET Core 內建的 IoC / DI Container 容器提供的型別註冊與解析服務，如此，當在設計元件程式碼的時候，需要哪些服務，就可以在 Blazor 元件內使用 `@inject` 語法，將這個服務元件注入進來，充分做到鬆散耦合的需求，也增大了程式碼可維護性
+T> 
+T> 至於所增加的可維護性有什麼好處，在這一章節中，將會把儲存在記憶體內的記事 CRUD 需求，設計成為一個服務，在下一章中，將會直接新增一個使用資料庫的記事 CRUD 服務，接著，僅需要變更 DI Container 的型別註冊動作，整個程式碼無須變更，這個應用程式立即轉換成為使用資料庫作為儲存的媒介。
+
 ## 建立記事的抽象型別與具體實作類別
 
 - 滑鼠右擊專案節點
@@ -113,6 +119,10 @@ using BlazorOverview.Services;
 services.AddScoped<IMyNoteService, MyNoteService>();
 ```
 
+  T> ## 提示說明
+  T>
+  T> 這裡就是透過 ASP.NET Core 內建的 DI 容器，進行抽象型別與具體服務型別的註冊
+
 ## 設計完成後的完整 Startup.cs 內容
 
 - 確認這個 Startup.cs 檔案內容，與底下的程式碼相同
@@ -196,6 +206,10 @@ namespace BlazorOverview
 @*當這個 Blazor 元件建立之後，要注入這個 IMyNoteService 抽象型別的具體實作物件*@
 @inject IMyNoteService MyNoteService
 ```
+
+  T> ## 提示說明
+  T>
+  T> 這裡將會注入 IMyNoteService 當初註冊的具體服務類別的執行個體，程式設計師無需使用 new 運算子來建立起該物件，避免造成緊密耦合的關係
 
 - 在 `@code {}` 程式碼區塊內，找到 `protected override void OnInitialized()` 方法，將這個方法刪除掉
 - 使用底下的非同步 `OnInitializedAsync` 方法，建立在 `@code {}` 程式碼區塊內

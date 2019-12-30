@@ -2,6 +2,11 @@
 
 這裡將要使用對話窗的機制來擴增該專案的新增與修改功能，不過，在這裡將不會使用到任何 JavaScript 與 jQuery 的機制，僅需要使用 C# & HTML 就可以完成這樣的設計
 
+T> ## 提示說明
+T>
+T> 當在開發前端網頁的時候，若想要使用 Bootstrap Modal 對話窗功能，對於要顯示與隱藏對話窗的時間，需要透過 JavaScript 程式碼的使用與呼叫，而在 Blazor 專案內，可以充分利用 資料綁定 Data Binding 的機制，透過 C# 變數來控制那些 HTML 標記要顯示還是要隱藏起來。
+T>
+
 ## 修正資料模型具有內建驗證屬性
 
 - 在專案中，找到 [Models] 資料夾
@@ -99,6 +104,10 @@ namespace BlazorOverview.Models
 }
 ```
 
+  T> ## 提示說明
+  T>
+  T> 這裡的 C# ShowPopup 變數，就是用來控制對話窗是否要顯示的控制項目
+   
 - 在 `@code{` 文字下方，找到 `private void Add()` 方法，將其方法刪除掉
 - 在 `@code {` 文字下方，加入底下的屬性或者欄位宣告
 
