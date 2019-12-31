@@ -3,7 +3,6 @@ ch00-about-the-book.md
 {mainmatter}
 chapter1.md
 chapter2.md
-chapter3.md
 {backmatter}
 ch99-copyright.md
 
