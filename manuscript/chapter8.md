@@ -1,6 +1,6 @@
 # 使用 Web API 來儲存記事服務相關紀錄
 
-最後，將會來設計一個呼叫 Web API 的服務，讓 Blazor 專案可以來呼叫剛剛設計的 RESTful Web API 服務。
+最後，將會來設計一個呼叫 Web API 的服務，讓 Blazor 專案可以來呼叫剛剛設計的 RESTful Web API 服務；當然，這裡又要再度借用 相依注入 Dependency Injection 這個設計模式，讓這個專案可以快速的替換使用 RESTful Web API 服務。
 
 ## 建立使用 Web API 的記事服務具體實作類別
 
@@ -58,8 +58,7 @@ public class MyNoteWebAPIService : IMyNoteService
     public async Task DeleteAsync(MyNote myNote)
     {
         await Client.DeleteAsync($"/API/MyNote/{myNote.Id}");
-    }
- 
+    } 
 }
 ```
 
@@ -83,7 +82,6 @@ services.AddHttpClient<IMyNoteService, MyNoteWebAPIService>(client =>
     client.BaseAddress = new Uri("https://localhost:5001/");
     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 });
-
 ```
 
 ## 設計完成後的完整 Startup.cs 內容

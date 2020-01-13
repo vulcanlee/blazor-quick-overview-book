@@ -1,6 +1,6 @@
 # 使用資料庫來儲存記事服務相關紀錄
 
-現在，將會改寫這個 Blazor 專案，將相關記事紀錄使用資料庫的方式來進行儲存，這裡將會使用 Entity Framework Core 這套 ORM 工具，並且使用 SQLite 資料庫。
+現在，開始來改寫這個 Blazor 專案，將相關記事紀錄使用資料庫的方式來進行儲存，這裡將會使用 Entity Framework Core 這套 ORM 工具，並且使用 SQLite 資料庫來進行儲存這些記事紀錄。
 
 ## 安裝 Entity Framework Core 需要用到的套件
 
@@ -53,7 +53,7 @@ namespace BlazorOverview.Models
 
 - 在專案中找到 [Models] 資料夾節點
 - 開啟 [MyNote.cs] 檔案節點
-- 加入 `public int Id { get; set; }` 這個屬性宣告，作為這個資料表的主鍵欄位
+- 加入 `public int Id { get; set; }` 這個屬性宣告，作為這個資料表的主鍵值 Key 欄位
 - 完成後的程式碼如下
 
 ```csharp
@@ -253,6 +253,7 @@ namespace BlazorOverview
 ## 啟用 EF Core 中的移轉功能
 
 - 點選 Visual Studio 2019 功能表 [工具] > [套件管理員] > [套件管理器主控台]
+- 現在在 Visual Studio 2019 內， [套件管理器主控台] 視窗將會顯示出來
 - 在 [套件管理器主控台] 視窗內，輸入 `Add-Migration Init`
   
   ![套件管理器主控台 Add-Migration Init](Images/BlazorQO972.png)

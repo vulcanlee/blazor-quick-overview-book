@@ -1,6 +1,6 @@
 # 在 Blazor 專案內呼叫 JavaScript 程式碼
 
-對於之前開發的 Blazor 專案中，用於新增與修改的 BootStrap 對話窗功能，是使用資料綁定的方式來顯示與關閉的，在這次的練習，將會讓 Blazor 專案，使用 C# 來呼叫 jQuery 的程式碼，做到動態的關閉與顯示對話窗的效果，另外，將會體驗使用 Blazor 的開源套件，針對刪除功能，一樣不會透過 JavaScript 的程式碼，可以動態的詢問是否要刪除這筆記事紀錄，依據使用者在對話窗內的選擇，決定是否要刪除這筆記事。
+對於之前開發的 Blazor 專案中，用於新增與修改的 BootStrap 對話窗功能，是使用資料綁定的方式來顯示與關閉，在這次的練習，將會讓 Blazor 專案，使用 C# 來呼叫 jQuery 的程式碼，做到動態的關閉與顯示對話窗的效果；另外，將會體驗使用 Blazor 的開源套件，針對刪除功能，一樣不會透過 JavaScript 的程式碼，而是透過 Blazor NuGet 套件，提供可以動態詢問是否要刪除這筆記事紀錄，依據使用者在對話窗內的選擇，決定是否要刪除這筆記事。
 
 ## 加入 BootStrap 需要用到的 JavaScript
 
@@ -22,6 +22,7 @@
     }
 </script>
 ```
+
 ## 修正 MyNotes.razor 元件，可以呼叫 JavaScript
 
 - 在專案中找到 [Pages] 資料夾節點
@@ -69,18 +70,18 @@
 </div>
 ```
 
-- 在 `@code { }` 程式碼區塊內，加入底下的變數宣告
+- 在 `@code { }` 程式碼區塊內，加入底下變數宣告
 
 ```csharp
 // 要顯示該新增與修改對話窗的 Id 名稱
 public string DialogIdName { get; set; } = "myModal";
 ```
 
-- 將原先的 `ShowPopup = true;` 敘述，使用 `await jsRuntime.InvokeAsync<object>("ShowModal", DialogIdName);` 敘述來取代
+- 將原先有使用到 `ShowPopup = true;` 所有敘述，修改成為使用 `await jsRuntime.InvokeAsync<object>("ShowModal", DialogIdName);` 敘述來取代
   
   > 若呼叫 jsRuntime 的方法為同步方法，請在前面加上 `async` 修飾詞
 
-- 將原先的 `ShowPopup = true;` 敘述，使用 `await jsRuntime.InvokeAsync<object>("ShowModal", DialogIdName);` 敘述來取代
+- 將原先有使用到 `ShowPopup = false;` 所有敘述，使用 `await jsRuntime.InvokeAsync<object>("CloseModal", DialogIdName);` 敘述來取代
   
   > 若呼叫 jsRuntime 的方法為同步方法，請在前面加上 `async` 修飾詞
   
@@ -91,6 +92,7 @@ public string DialogIdName { get; set; } = "myModal";
 - 瀏覽器顯示內容之後，請點選 [新增] 按鈕，將會出現底下畫面，這裡的對話窗將會是由 C# 呼叫 jQuery 程式碼而得到的結果
   
   ![使用 jQuery 顯示對話窗的新增記事畫面](Images/BlazorQO967.png)
+
 - 瀏覽器顯示內容之後，請點選任一記事 [修改] 按鈕，將會出現底下畫面，這裡的對話窗將會是由 C# 呼叫 jQuery 程式碼而得到的結果
   
   ![使用 jQuery 顯示對話窗的修改記事畫面](Images/BlazorQO966.png)
@@ -123,7 +125,7 @@ services.AddBlazoredModal();
 - 在專案的根目錄下，打開 [_Imports.razor] 檔案節點
 - 在這個檔案的下方，加入底下命名空間宣告
 
-```csharp
+```html
 @using Blazored
 @using Blazored.Modal
 @using Blazored.Modal.Services

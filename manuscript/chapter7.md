@@ -1,6 +1,6 @@
 # 在 Blazor 專案加入 Web API 服務的功能
 
-現在已經開發完成一個具有 CRUD 的 Blazor 專案，不過，若想要在這個 Blazor 專案內，提供具有 RESTful API 的功能，可以參考底下的說明。
+現在已經開發完成一個具有 CRUD 的 Blazor 專案，不過，若想要在這個 Blazor 專案內，提供具有 RESTful Web API 的功能，可以參考底下的說明。
 
 ## 修正記事資料模型
 
