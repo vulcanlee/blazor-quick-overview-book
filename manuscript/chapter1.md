@@ -2,6 +2,10 @@
 
 首先，先要來學習如何透過 Visual Studio 2019 開發工具來建立一個 Blazor 伺服器端的專案
 
+X> ## 練習專案原始碼
+X>
+X> 在這一章完成的練習專案原始碼，可以從 [Create Project](https://github.com/vulcanlee/Blazor-Quick-Overview/tree/master/Create%20Project) 取得
+
 > 這本書的所有內容將會是在 Windows 10 專業版 (版本 1909 / 組建 18363.535) 與 Visual Studio 2019 Enterprise ( Version 16.4.2) 下所建立出來的，當然，任何 Visual Studio 2019 的版本皆可，不一定要使用 Enterprise 版本，Community / Professioal 版本也可以。
 >
 > 在安裝的時候，記得在 [工作負載] 頁次中，勾選 [ASP.NET 與網頁程式開發] 和 [.NET Core 跨平台開發]

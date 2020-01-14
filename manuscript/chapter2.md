@@ -2,6 +2,10 @@
 
 現在要來先建立一個 Blazor 專案的 CRUD之新增與修改功能，不過，在這裡的新增功能將不會有記事紀錄輸入畫面，而是自動產生一筆隨機記事紀錄。
 
+X> ## 練習專案原始碼
+X>
+X> 在這一章完成的練習專案原始碼，可以從 [Notes Add and Delete](https://github.com/vulcanlee/Blazor-Quick-Overview/tree/master/Notes%20Add%20and%20Delete) 取得
+
 ## 建立專案會用到的資料模型
 
 - 滑鼠右擊專案節點

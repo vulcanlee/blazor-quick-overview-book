@@ -2,6 +2,10 @@
 
 現在已經開發完成一個具有 CRUD 的 Blazor 專案，不過，若想要在這個 Blazor 專案內，提供具有 RESTful Web API 的功能，可以參考底下的說明。
 
+X> ## 練習專案原始碼
+X>
+X> 在這一章完成的練習專案原始碼，可以從 [Notes Web API](https://github.com/vulcanlee/Blazor-Quick-Overview/tree/master/Notes%20Web%20API) 取得
+
 ## 修正記事資料模型
 
 - 在 [Models] 目錄下，找到 [MyNote.cs] 檔案節點

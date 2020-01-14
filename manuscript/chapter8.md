@@ -2,6 +2,10 @@
 
 最後，將會來設計一個呼叫 Web API 的服務，讓 Blazor 專案可以來呼叫剛剛設計的 RESTful Web API 服務；當然，這裡又要再度借用 相依注入 Dependency Injection 這個設計模式，讓這個專案可以快速的替換使用 RESTful Web API 服務。
 
+X> ## 練習專案原始碼
+X>
+X> 在這一章完成的練習專案原始碼，可以從 [Notes Web API With Service](https://github.com/vulcanlee/Blazor-Quick-Overview/tree/master/Notes%20Web%20API%20With%20Service) 取得
+
 ## 建立使用 Web API 的記事服務具體實作類別
 
 - 滑鼠右擊 [Services] 資料夾節點

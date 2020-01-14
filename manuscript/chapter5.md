@@ -2,6 +2,10 @@
 
 現在，開始來改寫這個 Blazor 專案，將相關記事紀錄使用資料庫的方式來進行儲存，這裡將會使用 Entity Framework Core 這套 ORM 工具，並且使用 SQLite 資料庫來進行儲存這些記事紀錄。
 
+X> ## 練習專案原始碼
+X>
+X> 在這一章完成的練習專案原始碼，可以從 [Notes Service To Database](https://github.com/vulcanlee/Blazor-Quick-Overview/tree/master/Notes%20Service%20To%20Database) 取得
+
 ## 安裝 Entity Framework Core 需要用到的套件
 
 - 滑鼠右擊專案節點

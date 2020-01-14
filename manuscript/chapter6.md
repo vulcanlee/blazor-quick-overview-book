@@ -2,6 +2,10 @@
 
 對於之前開發的 Blazor 專案中，用於新增與修改的 BootStrap 對話窗功能，是使用資料綁定的方式來顯示與關閉，在這次的練習，將會讓 Blazor 專案，使用 C# 來呼叫 jQuery 的程式碼，做到動態的關閉與顯示對話窗的效果；另外，將會體驗使用 Blazor 的開源套件，針對刪除功能，一樣不會透過 JavaScript 的程式碼，而是透過 Blazor NuGet 套件，提供可以動態詢問是否要刪除這筆記事紀錄，依據使用者在對話窗內的選擇，決定是否要刪除這筆記事。
 
+X> ## 練習專案原始碼
+X>
+X> 在這一章完成的練習專案原始碼，可以從 [Notes Show Dialog by jQuery](https://github.com/vulcanlee/Blazor-Quick-Overview/tree/master/Notes%20Show%20Dialog%20by%20jQuery) 取得
+
 ## 加入 BootStrap 需要用到的 JavaScript
 
 - 在專案中找到 [Pages] 資料夾節點

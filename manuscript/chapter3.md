@@ -4,6 +4,10 @@
 
 另外，將會追加資料欄位具有驗證檢查功能，這個部分將會使用到 Blazor 的 表單和驗證 功能來達成，僅需要做宣告，無需做任何程式碼設計。
 
+X> ## 練習專案原始碼
+X>
+X> 在這一章完成的練習專案原始碼，可以從 [Notes Record Dialog](https://github.com/vulcanlee/Blazor-Quick-Overview/tree/master/Notes%20Record%20Dialog) 取得
+
 T> ## 提示說明
 T>
 T> 當在開發前端網頁的時候，若想要使用 Bootstrap Modal 對話窗功能，對於要顯示與隱藏對話窗的時間，需要透過 JavaScript 程式碼的使用與呼叫；而在 Blazor 專案內，可以充分利用 資料綁定 Data Binding 的機制，透過 C# 變數來控制那些 HTML 標記要顯示還是要隱藏起來。
